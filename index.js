@@ -1,6 +1,6 @@
 const stores = [];
 const items = [];
-const UPDATE_DATE = new Date("2024-11-14");
+const updateDate = new Date("2024-11-21");
 
 function addStore(name, logo) {
 	stores.push(new Store(name, logo));
@@ -46,11 +46,11 @@ $(document).ready(function() {
 	addItem("Potro Pro", "https://www.pro-bikegear.com/_assets/images/category/maintenance/pro_tl_repairs2_1.png");
 	addItem("Star Wars Outlaws", "https://m.media-amazon.com/images/I/51WkH6oas+L._AC_.jpg");
 	addItem("The Legend of Zelda: Echoes of Wisdom", "https://m.media-amazon.com/images/I/81jeDpU8XhL._AC_SL1500_.jpg");
-	addPrice("Kryptonite New York Lock M18-WL", "Alltricks", 136.99, "https://www.alltricks.es/F-41480-antivols/P-284679-kryptonite_new_york_lock_m18_wl_u_lock");
+	addPrice("Kryptonite New York Lock M18-WL", "Alltricks", 133.99, "https://www.alltricks.es/F-41480-antivols/P-284679-kryptonite_new_york_lock_m18_wl_u_lock");
 	addPrice("Kryptonite New York Lock M18-WL", "Amazon", 121.56, "https://www.amazon.es/Kryptonite-New-York-M18-bicicleta/dp/B000AOA3W6");
-	addPrice("Marvel's Spider-Man 2", "Amazon", 60.47, "https://www.amazon.es/Spiderman-Videojuego-Playstation-Interactive-Configurable/dp/B0C7X5Q6R1/");
-	addPrice("Potro Pro", "Amazon", 206.76, "https://www.amazon.es/Pro-PR100360-Mecanico-Bolsa-Bandeja/dp/B001F3SCAQ");
-	//addPrice("Star Wars Outlaws", "Amazon", 64.99, "https://www.amazon.es/Ubisoft-Star-Wars-Outlaws-PS5/dp/B0DGLV9Z86");
+	addPrice("Marvel's Spider-Man 2", "Amazon", 69.90, "https://www.amazon.es/Spiderman-Videojuego-Playstation-Interactive-Configurable/dp/B0C7X5Q6R1/");
+	addPrice("Potro Pro", "Amazon", 198.58, "https://www.amazon.es/Pro-PR100360-Mecanico-Bolsa-Bandeja/dp/B001F3SCAQ");
+	addPrice("Star Wars Outlaws", "Amazon", 60.06, "https://www.amazon.es/Ubisoft-Star-Wars-Outlaws-PS5/dp/B0DGLV9Z86");
 	addPrice("The Legend of Zelda: Echoes of Wisdom", "Amazon", 49.90, "https://www.amazon.es/Nintendo-Switch-Legend-Zelda-Echoes/dp/B0D7DBHVWV");
 	addPrice("Bomba de pie Pro Team", "BikeInn", 101.99, "https://www.tradeinn.com/bikeinn/es/pro-bomba-pie-team/137965021/p");
 	addPrice("Kryptonite New York Lock M18-WL", "BikeInn", 128.49, "https://www.tradeinn.com/bikeinn/es/kryptonite-candado-en-u-new-york-m18-wl/138366662/p");
@@ -66,7 +66,7 @@ $(document).ready(function() {
 	addPrice("Bomba de pie Pro Team", "Santafixie", 93.49, "https://www.santafixie.com/inflador-taller-pro-team-manometro-analogico-doble-negro.html");
 	addPrice("Kryptonite New York Lock M18-WL", "Santafixie", 128.99, "https://www.santafixie.com/kryptonite-new-york-m18-wl.html");
 	addPrice("Marvel's Spider-Man 2", "TodoConsolas", 59.95, "https://www.todoconsolas.com/juegos-ps5/115469-marvel_s_spider_man_2_ps5_sp_180153-711719571827.html")
-	addPrice("Star Wars Outlaws", "TodoConsolas", 69.95, "https://www.todoconsolas.com/juegos-ps5/139221-star_wars_outlaws_ps5_sp_203334-3307216284161.html");
+	addPrice("Star Wars Outlaws", "TodoConsolas", 67.95, "https://www.todoconsolas.com/juegos-ps5/139221-star_wars_outlaws_ps5_sp_203334-3307216284161.html");
 	addPrice("The Legend of Zelda: Echoes of Wisdom", "TodoConsolas", 50.95, "https://www.todoconsolas.com/juegos-switch/144406-the_legend_of_zelda_echoes_of_wisdom_switch_sp_208394-45496512453.html");
 	addPrice("Marvel's Spider-Man 2", "Wakkap", 64.90, "https://wakkap.com/item/ps5-marvel-spiderman-2");
 	addPrice("Star Wars Outlaws", "Wakkap", 69.90, "https://wakkap.com/item/ps5-star-wars-outlaws");
@@ -77,9 +77,9 @@ $(document).ready(function() {
 
 	items.forEach(item => item.prices.sort((a, b) => a.price - b.price));
 	const randomOrderedItems = _.shuffle(items);
-	
+
 	randomOrderedItems.forEach(function(item, index) {
-		$(".container .row").append(`<div class="item-wrapper col-12 col-lg-6 col-xl-4 col-xxl-3">
+		$(".container .row").append(`<div class="item-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
 			<div class="card h-100">
 				<div class="card-img-wrapper ratio ratio-1x1">
 				<img src="${item.picture}" alt="${item.name}" class="item-pic card-img-top object-fit-${item.name.includes("Mecánica") ? "cover" : "scale"}">
@@ -93,25 +93,25 @@ $(document).ready(function() {
 				</div>
 			</div>
 		<div>`);
-		
+
 		$("body").append(`<div class="modal fade" id="modal-${index}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel${index}" aria-hidden="true">
-		  <div class="modal-dialog modal-fullscreen-lg-down">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h1 class="modal-title fs-5" id="modalLabel${index}">${item.name}</h1>
+			<div class="modal-dialog modal-fullscreen-md-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="modalLabel${index}">${item.name}</h1>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		      </div>
-		      <div class="modal-body">
+					</div>
+					<div class="modal-body">
 						<div class="modal-img-wrapper mb-3 ratio ratio-1x1">
-		      		<img src="${item.picture}" alt="${item.name}" class="object-fit-${item.name.includes("Mecánica") ? "cover" : "scale"} rounded">
+							<img src="${item.picture}" alt="${item.name}" class="object-fit-${item.name.includes("Mecánica") ? "cover" : "scale"} rounded">
 						</div>
 						<div class="container-fluid prices-wrapper">
 						</div>
-		      </div>
-		    </div>
-		  </div>
+					</div>
+				</div>
+			</div>
 		</div>`);
-		
+
 		item.prices.forEach(function(price, priceIndex) {
 			$(`#modal-${index} .prices-wrapper`).append(`<div class="row d-flex position-relative align-items-center my-3 w-100">
 				<div class="col-3">
@@ -120,16 +120,16 @@ $(document).ready(function() {
 					</a>
 				</div>
 				<div class="col-7">
-					<small><em>${stores.find(e => e.name === price.store).info ? stores.find(e => e.name === price.store).info : ""}</em></small>
+					<small class="fst-italic">${stores.find(e => e.name === price.store).info ? stores.find(e => e.name === price.store).info : ""}</small>
 				</div>
-				<div class="col-2 ms-auto">
+				<div class="col-2 p-0 text-end">
 					<span>${price.price.toLocaleString("es-ES", {style: "currency", currency: "EUR"})}</span>
 				</div>
 			</div>`);
-			
+
 			if (item.prices[priceIndex + 1]) $(`#modal-${index} .prices-wrapper`).append('<hr class="m-0 border-secondary">');
 		});
 	});
 
-	$("#update-date").html(`Precios actualizados a ${UPDATE_DATE.toLocaleString("es-ES", {dateStyle: "long"})}`);
+	$("#update-date").html(`Precios actualizados a ${updateDate.toLocaleString("es-ES", {dateStyle: "long"})}`);
 });
