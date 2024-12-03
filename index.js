@@ -1,6 +1,8 @@
 const stores = [];
 const items = [];
-const updateDate = new Date("2024-11-21");
+const updateDate = new Date("2024-12-03");
+
+const coverScale = ["Mecánica de bicicletas: Manual paso a paso", "Lazer Jackal Kineticore (L, matte black)"];
 
 function addStore(name, logo) {
 	stores.push(new Store(name, logo));
@@ -30,50 +32,42 @@ $(document).ready(function() {
 	addStore("TodoConsolas", "https://www.todoconsolas.com/img/todoconsolas-logo-1582897196.jpg");
 	addStore("Wakkap", "https://images.prismic.io/rakuten-europe/3015a355-edf4-4ae6-b9b3-ecb245dacd46_wakkap.png");
 	addStore("Xtralife", "https://res.cloudinary.com/admitad-gmbh/image/upload/w_auto,h_160,c_pad,b_white,f_auto/8454c674b2734e8ad652403983f121e0.png");
-	addInfo("Alltricks", "Envío gratuito.");
+	addInfo("Alltricks", "Gastos de envío desde 3,99 €. Envío gratuito a partir de 99 €.");
 	addInfo("El Corte Inglés", "Descuento del Montepío incluido.");
 	addInfo("Escuela de Mecánica de Bicicletas", "Al acceder a emeb.es salta una ventana indicando que te envian un descuento del 25 % en la compra del manual si facilitas un email.");
 	addInfo("Game", "Gastos de envío: 4,99 €.\nRecogida gratuita en tienda (La Vaguada).");
-	addInfo("Mammoth", "Gastos de envío: 3,99 €.\nRecogida gratuita en tienda (Villalba).");
+	addInfo("Mammoth", "Gastos de envío desde 2,99 €.\nRecogida gratuita en tienda (Villalba).");
 	addInfo("Santafixie", "Envío gratuito desde 49 €.");
-	addInfo("TodoConsolas", "Gastos de envío: 0,99 €.\nRecogida gratuita en oficina de Correos.");
+	addInfo("TodoConsolas", "Gastos de envío: 0,99–3,95 €.\nRecogida gratuita o por 2,95 en oficina de Correos.");
 	addInfo("Wakkap", "Gastos de envío: 2,99 €.");
 	addInfo("Xtralife", "Gastos de envío: 2,99 €.");
-	addItem("Bomba de pie Pro Team", "https://www.pro-bikegear.com/_assets/images/category/accessories/pumps/prpu0102-pro-2020_06_1549155_lr.png");
+	addItem("Five XR-Pro (XL, black)", "https://bike.five-gloves.com/wp-content/uploads/2021/09/FIVE-GLOVES-BIKE-MTB-XR-PRO-black-2022.jpg");
 	addItem("Kryptonite New York Lock M18-WL", "https://www.kryptonitelock.com/content/dam/kryt-us/en/product-images/994589%20high%20res.jpg");
-	addItem("Marvel's Spider-Man 2", "https://m.media-amazon.com/images/I/81DC-janmJL._AC_SL1500_.jpg");
-	addItem("Mecánica de bicicletas: Manual paso a paso", "https://dg9aaz8jl1ktt.cloudfront.net/uploaded_files/000/249/215/verkami_79b2a3fe72130511becee63c507b5803.jpg")
-	addItem("Potro Pro", "https://www.pro-bikegear.com/_assets/images/category/maintenance/pro_tl_repairs2_1.png");
+	addItem("Lazer Jackal Kineticore (L, matte black)", "https://www.lazersport.com/_assets/images/kineticore/helmets/jackal/gallery-new-straps/matte-black/my2023_jackal_kineticore_matte_black_sider_1400x1011.jpg");
+	addItem("Mecánica de bicicletas: Manual paso a paso", "https://dg9aaz8jl1ktt.cloudfront.net/uploaded_files/000/249/215/verkami_79b2a3fe72130511becee63c507b5803.jpg");
+	addItem("Sony Pulse Elite", "https://www.todoconsolas.com/244111-medium_default/headset_inalambricos_pulse_elite_blanco_198554.jpg");
 	addItem("Star Wars Outlaws", "https://m.media-amazon.com/images/I/51WkH6oas+L._AC_.jpg");
-	addItem("The Legend of Zelda: Echoes of Wisdom", "https://m.media-amazon.com/images/I/81jeDpU8XhL._AC_SL1500_.jpg");
-	addPrice("Kryptonite New York Lock M18-WL", "Alltricks", 133.99, "https://www.alltricks.es/F-41480-antivols/P-284679-kryptonite_new_york_lock_m18_wl_u_lock");
+	addPrice("Five XR-Pro (XL, black)", "Alltricks", 34.99, "https://www.alltricks.es/F-41489-gants/P-1467700-par_de_guantes_largos_five_xr_pro_black");
+addPrice("Kryptonite New York Lock M18-WL", "Alltricks", 130.99, "https://www.alltricks.es/F-41480-antivols/P-284679-kryptonite_new_york_lock_m18_wl_u_lock");
 	addPrice("Kryptonite New York Lock M18-WL", "Amazon", 121.56, "https://www.amazon.es/Kryptonite-New-York-M18-bicicleta/dp/B000AOA3W6");
-	addPrice("Marvel's Spider-Man 2", "Amazon", 69.90, "https://www.amazon.es/Spiderman-Videojuego-Playstation-Interactive-Configurable/dp/B0C7X5Q6R1/");
-	addPrice("Potro Pro", "Amazon", 198.58, "https://www.amazon.es/Pro-PR100360-Mecanico-Bolsa-Bandeja/dp/B001F3SCAQ");
-	addPrice("Star Wars Outlaws", "Amazon", 60.06, "https://www.amazon.es/Ubisoft-Star-Wars-Outlaws-PS5/dp/B0DGLV9Z86");
-	addPrice("The Legend of Zelda: Echoes of Wisdom", "Amazon", 49.90, "https://www.amazon.es/Nintendo-Switch-Legend-Zelda-Echoes/dp/B0D7DBHVWV");
-	addPrice("Bomba de pie Pro Team", "BikeInn", 101.99, "https://www.tradeinn.com/bikeinn/es/pro-bomba-pie-team/137965021/p");
-	addPrice("Kryptonite New York Lock M18-WL", "BikeInn", 128.49, "https://www.tradeinn.com/bikeinn/es/kryptonite-candado-en-u-new-york-m18-wl/138366662/p");
-	addPrice("Potro Pro", "BikeInn", 167.49, "https://www.tradeinn.com/bikeinn/es/pro-soporte-de-trabajo-mechanic-standing-with-bag-and-tray/1120815/p");
-	addPrice("Marvel's Spider-Man 2", "El Corte Inglés", 74.31, "https://www.elcorteingles.es/videojuegos/A48376773-marvels-spider-man-2-playstation-5/");
-	addPrice("Star Wars Outlaws", "El Corte Inglés", 76.17, "https://www.elcorteingles.es/videojuegos/A51463260-star-wars-outlaws-playstation-5/");
-	addPrice("The Legend of Zelda: Echoes of Wisdom", "El Corte Inglés", 55.71, "https://www.elcorteingles.es/videojuegos/A52182952-the-legend-of-zelda-echoes-of-wisdom-nintendo-switch/");
+	addPrice("Lazer Jackal Kineticore (L, matte black)", "Amazon", 194.41, "https://www.amazon.es/Lazer-Casco-Jackal-Kineticore-Negro/dp/B09XS7JBYM");
+addPrice("Sony Pulse Elite", "Amazon", 119, "https://www.amazon.es/PlayStation-Auriculares-inalámbricos-Pulse-EliteTM/dp/B0CMJYZ76W");
+	addPrice("Star Wars Outlaws", "Amazon", 63.19, "https://www.amazon.es/Ubisoft-Star-Wars-Outlaws-PS5/dp/B0DGLV9Z86");
+	addPrice("Five XR-Pro (XL, black)", "BikeInn", 30.99, "https://www.tradeinn.com/bikeinn/es/five-gloves-guantes-xr-pro/139825688/p");
+addPrice("Kryptonite New York Lock M18-WL", "BikeInn", 119.49, "https://www.tradeinn.com/bikeinn/es/kryptonite-candado-en-u-new-york-m18-wl/138366662/p");
+	addPrice("Lazer Jackal Kineticore (L, matte black)", "BikeInn", 156.99, "https://www.tradeinn.com/bikeinn/es/lazer-casco-de-mtb-jackal-kc/139126282/p");
+	addPrice("Star Wars Outlaws", "El Corte Inglés", 51.06, "https://www.elcorteingles.es/videojuegos/A51463260-star-wars-outlaws-playstation-5/");
 	addPrice("Mecánica de bicicletas: Manual paso a paso", "Escuela de Mecánica de Bicicletas", 47, "https://www.emeb.es/producto/libro-mecanica-de-bicicletas-manual-paso-a-paso/");
-	addPrice("Marvel's Spider-Man 2", "Game", 69.99, "https://www.game.es/VIDEOJUEGOS/ACCION/PLAYSTATION-5/MARVELS-SPIDER-MAN-2/218764");
-	addPrice("The Legend of Zelda: Echoes of Wisdom", "Game", 59.99, "https://www.game.es/VIDEOJUEGOS/AVENTURA/NINTENDO-SWITCH/THE-LEGEND-OF-ZELDA-ECHOES-OF-WISDOM/232664");
-	addPrice("Kryptonite New York Lock M18-WL", "Mammoth", 128.49, "https://www.mammothbikes.com/antirrobo-kryptonite-new-york-u_lock-m18_wl/p-502095");
-	addPrice("Potro Pro", "Mammoth", 167.49, "https://www.mammothbikes.com/potro-pro-pie-mecanico---bolsa-bandeja/p-201345");
-	addPrice("Bomba de pie Pro Team", "Santafixie", 93.49, "https://www.santafixie.com/inflador-taller-pro-team-manometro-analogico-doble-negro.html");
+	addPrice("Sony Pulse Elite", "Game", 129.99, "https://www.game.es/ACCESORIOS/AURICULARES/PLAYSTATION-5/AURICULARES-INALAMBRICOS-PULSE-ELITE/225019");
+	addPrice("Kryptonite New York Lock M18-WL", "Mammoth", 119.49, "https://www.mammothbikes.com/antirrobo-kryptonite-new-york-u_lock-m18_wl/p-502095");
+	addPrice("Lazer Jackal Kineticore (L, matte black)", "Mammoth", 150.99, "https://www.mammothbikes.com/casco-lazer-jackal-kineticore/p-525118");
 	addPrice("Kryptonite New York Lock M18-WL", "Santafixie", 128.99, "https://www.santafixie.com/kryptonite-new-york-m18-wl.html");
-	addPrice("Marvel's Spider-Man 2", "TodoConsolas", 59.95, "https://www.todoconsolas.com/juegos-ps5/115469-marvel_s_spider_man_2_ps5_sp_180153-711719571827.html")
-	addPrice("Star Wars Outlaws", "TodoConsolas", 67.95, "https://www.todoconsolas.com/juegos-ps5/139221-star_wars_outlaws_ps5_sp_203334-3307216284161.html");
-	addPrice("The Legend of Zelda: Echoes of Wisdom", "TodoConsolas", 50.95, "https://www.todoconsolas.com/juegos-switch/144406-the_legend_of_zelda_echoes_of_wisdom_switch_sp_208394-45496512453.html");
-	addPrice("Marvel's Spider-Man 2", "Wakkap", 64.90, "https://wakkap.com/item/ps5-marvel-spiderman-2");
+	addPrice("Sony Pulse Elite", "TodoConsolas", 139.95, "https://www.todoconsolas.com/accesorios-ps5/134133-headset_inalambricos_pulse_elite_blanco_198554-0711719572978.html");
+addPrice("Star Wars Outlaws", "TodoConsolas", 54.95, "https://www.todoconsolas.com/juegos-ps5/139221-star_wars_outlaws_ps5_sp_203334-3307216284161.html");
+	addPrice("Sony Pulse Elite", "Wakkap", 149.90, "https://wakkap.com/item/ps5-auriculares-inalambricos-pulse-elite");
 	addPrice("Star Wars Outlaws", "Wakkap", 69.90, "https://wakkap.com/item/ps5-star-wars-outlaws");
-	addPrice("The Legend of Zelda: Echoes of Wisdom", "Wakkap", 49.90, "https://wakkap.com/item/switch-the-legend-of-zelda-echoes-of-wisdom");
-	addPrice("Marvel's Spider-Man 2", "Xtralife", 72.95, "https://www.xtralife.com/producto/marvels-spider-man-2-ps5-estandar/68889");
-	addPrice("Star Wars Outlaws", "Xtralife", 69.95, "https://www.xtralife.com/producto/star-wars-outlaws-ps5-estandar/80102");
-	addPrice("The Legend of Zelda: Echoes of Wisdom", "Xtralife", 54.95, "https://www.xtralife.com/producto/the-legend-of-zelda-echoes-of-wisdom-switch-estandar/90410");
+	addPrice("Sony Pulse Elite", "Xtralife", 119.95, "https://www.xtralife.com/producto/auriculares-inalambricos-pulse-3d-elite-ps5/81528");
+	addPrice("Star Wars Outlaws", "Xtralife", 46.95, "https://www.xtralife.com/producto/star-wars-outlaws-ps5-estandar/80102");
 
 	items.forEach(item => item.prices.sort((a, b) => a.price - b.price));
 	const randomOrderedItems = _.shuffle(items);
@@ -82,7 +76,7 @@ $(document).ready(function() {
 		$(".container .row").append(`<div class="item-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
 			<div class="card h-100">
 				<div class="card-img-wrapper ratio ratio-1x1">
-				<img src="${item.picture}" alt="${item.name}" class="item-pic card-img-top object-fit-${item.name.includes("Mecánica") ? "cover" : "scale"}">
+				<img src="${item.picture}" alt="${item.name}" class="item-pic card-img-top object-fit-${coverScale.includes(item.name) ? "cover" : "scale"}">
 				</div>
 				<div class="card-body">
 					<h5 class="card-title h-50">${item.name}</h5>
@@ -103,7 +97,7 @@ $(document).ready(function() {
 					</div>
 					<div class="modal-body">
 						<div class="modal-img-wrapper mb-3 ratio ratio-1x1">
-							<img src="${item.picture}" alt="${item.name}" class="object-fit-${item.name.includes("Mecánica") ? "cover" : "scale"} rounded">
+							<img src="${item.picture}" alt="${item.name}" class="object-fit-${coverScale.includes(item.name) ? "cover" : "scale"} rounded">
 						</div>
 						<div class="container-fluid prices-wrapper">
 						</div>
