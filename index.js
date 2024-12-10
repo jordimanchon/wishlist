@@ -1,8 +1,8 @@
 const stores = [];
 const items = [];
-const updateDate = new Date("2024-12-03");
+const updateDate = new Date("2024-12-10");
 
-const coverScale = ["Mecánica de bicicletas: Manual paso a paso", "Lazer Jackal Kineticore (L, matte black)"];
+const coverScale = ["Mecánica de bicicletas: Manual paso a paso", "Lazer Jackal Kineticore (L, matte black)", "Vans BMX Old Skool (46, black)"];
 
 function addStore(name, logo) {
 	stores.push(new Store(name, logo));
@@ -30,6 +30,7 @@ $(document).ready(function() {
 	addStore("Mammoth", "https://www.mammothbikes.com/Content/images/mammoth/logo-web-mammoth.svg");
 	addStore("Santafixie", "https://asociacionambe.com/wp-content/uploads/2021/10/LOGO-SANTAFIXIE-alta-768x140.png");
 	addStore("TodoConsolas", "https://www.todoconsolas.com/img/todoconsolas-logo-1582897196.jpg");
+	addStore("Vans", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Vans-logo.svg/1280px-Vans-logo.svg.png");
 	addStore("Wakkap", "https://images.prismic.io/rakuten-europe/3015a355-edf4-4ae6-b9b3-ecb245dacd46_wakkap.png");
 	addStore("Xtralife", "https://res.cloudinary.com/admitad-gmbh/image/upload/w_auto,h_160,c_pad,b_white,f_auto/8454c674b2734e8ad652403983f121e0.png");
 	addInfo("Alltricks", "Gastos de envío desde 3,99 €. Envío gratuito a partir de 99 €.");
@@ -47,23 +48,25 @@ $(document).ready(function() {
 	addItem("Mecánica de bicicletas: Manual paso a paso", "https://dg9aaz8jl1ktt.cloudfront.net/uploaded_files/000/249/215/verkami_79b2a3fe72130511becee63c507b5803.jpg");
 	addItem("Sony Pulse Elite", "https://www.todoconsolas.com/244111-medium_default/headset_inalambricos_pulse_elite_blanco_198554.jpg");
 	addItem("Star Wars Outlaws", "https://m.media-amazon.com/images/I/51WkH6oas+L._AC_.jpg");
+	addItem("Vans BMX Old Skool (46, black)", "https://wallride.cl/cdn/shop/files/VN0A2Z3WYV3-ALT1_720x.jpg");
 	addPrice("Five XR-Pro (XL, black)", "Alltricks", 34.99, "https://www.alltricks.es/F-41489-gants/P-1467700-par_de_guantes_largos_five_xr_pro_black");
-addPrice("Kryptonite New York Lock M18-WL", "Alltricks", 130.99, "https://www.alltricks.es/F-41480-antivols/P-284679-kryptonite_new_york_lock_m18_wl_u_lock");
-	addPrice("Kryptonite New York Lock M18-WL", "Amazon", 121.56, "https://www.amazon.es/Kryptonite-New-York-M18-bicicleta/dp/B000AOA3W6");
-	addPrice("Lazer Jackal Kineticore (L, matte black)", "Amazon", 194.41, "https://www.amazon.es/Lazer-Casco-Jackal-Kineticore-Negro/dp/B09XS7JBYM");
-addPrice("Sony Pulse Elite", "Amazon", 119, "https://www.amazon.es/PlayStation-Auriculares-inalámbricos-Pulse-EliteTM/dp/B0CMJYZ76W");
+	addPrice("Kryptonite New York Lock M18-WL", "Alltricks", 127.99, "https://www.alltricks.es/F-41480-antivols/P-284679-kryptonite_new_york_lock_m18_wl_u_lock");
+	addPrice("Kryptonite New York Lock M18-WL", "Amazon", 121.07, "https://www.amazon.es/Kryptonite-New-York-M18-WL-Bicicleta/dp/B07VL2GBD9");
+	addPrice("Lazer Jackal Kineticore (L, matte black)", "Amazon", 178.92, "https://www.amazon.es/Lazer-Casco-Jackal-Kineticore-Negro/dp/B09XS7JBYM");
+	addPrice("Sony Pulse Elite", "Amazon", 119, "https://www.amazon.es/PlayStation-Auriculares-inalámbricos-Pulse-EliteTM/dp/B0CMJYZ76W");
 	addPrice("Star Wars Outlaws", "Amazon", 63.19, "https://www.amazon.es/Ubisoft-Star-Wars-Outlaws-PS5/dp/B0DGLV9Z86");
-	addPrice("Five XR-Pro (XL, black)", "BikeInn", 30.99, "https://www.tradeinn.com/bikeinn/es/five-gloves-guantes-xr-pro/139825688/p");
-addPrice("Kryptonite New York Lock M18-WL", "BikeInn", 119.49, "https://www.tradeinn.com/bikeinn/es/kryptonite-candado-en-u-new-york-m18-wl/138366662/p");
+	addPrice("Five XR-Pro (XL, black)", "BikeInn", 38.99, "https://www.tradeinn.com/bikeinn/es/five-gloves-guantes-xr-pro/139825688/p");
+	addPrice("Kryptonite New York Lock M18-WL", "BikeInn", 128.49, "https://www.tradeinn.com/bikeinn/es/kryptonite-candado-en-u-new-york-m18-wl/138366662/p");
 	addPrice("Lazer Jackal Kineticore (L, matte black)", "BikeInn", 156.99, "https://www.tradeinn.com/bikeinn/es/lazer-casco-de-mtb-jackal-kc/139126282/p");
 	addPrice("Star Wars Outlaws", "El Corte Inglés", 51.06, "https://www.elcorteingles.es/videojuegos/A51463260-star-wars-outlaws-playstation-5/");
 	addPrice("Mecánica de bicicletas: Manual paso a paso", "Escuela de Mecánica de Bicicletas", 47, "https://www.emeb.es/producto/libro-mecanica-de-bicicletas-manual-paso-a-paso/");
 	addPrice("Sony Pulse Elite", "Game", 129.99, "https://www.game.es/ACCESORIOS/AURICULARES/PLAYSTATION-5/AURICULARES-INALAMBRICOS-PULSE-ELITE/225019");
-	addPrice("Kryptonite New York Lock M18-WL", "Mammoth", 119.49, "https://www.mammothbikes.com/antirrobo-kryptonite-new-york-u_lock-m18_wl/p-502095");
+	addPrice("Kryptonite New York Lock M18-WL", "Mammoth", 128.49, "https://www.mammothbikes.com/antirrobo-kryptonite-new-york-u_lock-m18_wl/p-502095");
 	addPrice("Lazer Jackal Kineticore (L, matte black)", "Mammoth", 150.99, "https://www.mammothbikes.com/casco-lazer-jackal-kineticore/p-525118");
 	addPrice("Kryptonite New York Lock M18-WL", "Santafixie", 128.99, "https://www.santafixie.com/kryptonite-new-york-m18-wl.html");
 	addPrice("Sony Pulse Elite", "TodoConsolas", 139.95, "https://www.todoconsolas.com/accesorios-ps5/134133-headset_inalambricos_pulse_elite_blanco_198554-0711719572978.html");
-addPrice("Star Wars Outlaws", "TodoConsolas", 54.95, "https://www.todoconsolas.com/juegos-ps5/139221-star_wars_outlaws_ps5_sp_203334-3307216284161.html");
+	addPrice("Star Wars Outlaws", "TodoConsolas", 54.95, "https://www.todoconsolas.com/juegos-ps5/139221-star_wars_outlaws_ps5_sp_203334-3307216284161.html");
+	addPrice("Vans BMX Old Skool (46, black)", "Vans", 90, "https://www.vans.es/shop/es/vans-es/zapatillas-bmx-old-skool-vn0a2z3wyv3");
 	addPrice("Sony Pulse Elite", "Wakkap", 149.90, "https://wakkap.com/item/ps5-auriculares-inalambricos-pulse-elite");
 	addPrice("Star Wars Outlaws", "Wakkap", 69.90, "https://wakkap.com/item/ps5-star-wars-outlaws");
 	addPrice("Sony Pulse Elite", "Xtralife", 119.95, "https://www.xtralife.com/producto/auriculares-inalambricos-pulse-3d-elite-ps5/81528");
