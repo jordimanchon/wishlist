@@ -35,7 +35,7 @@ $(document).ready(function() {
 	addStore("Pasión Ciclista", "https://i.postimg.cc/VkLgkGH2/pasion-ciclista-1410767685.png");
 	//addStore("Santafixie", "https://asociacionambe.com/wp-content/uploads/2021/10/LOGO-SANTAFIXIE-alta-768x140.png");
 	addStore("Santini", "https://www.santinicycling.com/img/santini-maglificio-sportivo-logo-16164921601.jpg");
-	addStore("TodoConsolas", "https://www.todoconsolas.com/img/todoconsolas-logo-1582897196.jpg");
+	addStore("TodoConsolas", "https://www.todoconsolas.com/img/todoconsolas-logo-1738319580.jpg");
 	addStore("Vans", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Vans-logo.svg/1280px-Vans-logo.svg.png");
 	addStore("Wakkap", "https://images.prismic.io/rakuten-europe/3015a355-edf4-4ae6-b9b3-ecb245dacd46_wakkap.png");
 	addStore("Xtralife", "https://res.cloudinary.com/admitad-gmbh/image/upload/w_auto,h_160,c_pad,b_white,f_auto/8454c674b2734e8ad652403983f121e0.png");
